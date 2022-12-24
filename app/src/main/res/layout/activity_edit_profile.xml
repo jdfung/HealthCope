@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_profile">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_profile_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        android:src="@drawable/ic_person" />
+
+    <LinearLayout
+        android:id="@+id/first_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_profile_pic"
+        app:layout_constraintEnd_toEndOf="@+id/iv_profile_pic"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_pic"
+        android:backgroundTint="@color/colorPrimaryVariant">
+
+        <TextView
+            android:id="@+id/name_header"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Name"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <EditText
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/name_header"
+            app:layout_constraintEnd_toEndOf="@+id/name_header"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintStart_toStartOf="@+id/first_edit"
+        app:layout_constraintEnd_toEndOf="@+id/first_edit"
+        app:layout_constraintTop_toBottomOf="@+id/first_edit"
+        android:backgroundTint="@color/colorPrimaryVariant">
+
+        <EditText
+            android:id="@+id/edit_gender"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_person"
+            android:text="Male"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            android:focusableInTouchMode="false" />
+
+        <EditText
+            android:id="@+id/edit_height"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_height"
+            android:text="Height"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_weight"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_weight"
+            android:text="Weight"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_dob"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_dob"
+            android:text="Date of Birth"
+            android:textColor="@color/white"
+            android:inputType="date"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            android:focusableInTouchMode="false" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/login_button_shape"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@color/button_color"
+        app:layout_constraintEnd_toEndOf="@+id/second_edit"
+        app:layout_constraintStart_toStartOf="@+id/second_edit"
+        app:layout_constraintTop_toBottomOf="@+id/second_edit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

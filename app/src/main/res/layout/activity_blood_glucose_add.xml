@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".BloodGlucoseAdd"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="250dp"
+        android:background="@drawable/shape">
+
+        <LinearLayout
+
+            android:id="@+id/date_picker_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/date" />
+
+            <EditText
+                android:id="@+id/editTextDateBG_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:text="@string/dd_mm_yyyy"
+                android:textAlignment="textEnd" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/date_picker_actions"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-80dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+
+            <TextView
+                android:id="@+id/time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/time" />
+
+            <EditText
+                android:id="@+id/editTextTimeBG_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="time"
+                android:text="@string/hh_mm"
+                android:textAlignment="textEnd" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/time"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="-80dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/blood_glucose_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/blood_glucose"/>
+
+
+            <EditText
+                android:id="@+id/bp_data_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="@string/mmol_l"
+                android:textAlignment="textEnd" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/bg_cancel_btn"
+            style="@style/data_button_style"
+            android:layout_margin="16dp"
+            android:text="@string/add_data_cancel"
+            android:layout_gravity="center_horizontal|center_vertical|start"/>
+
+
+        <Button
+            android:id="@+id/bg_add_btn"
+            style="@style/data_button_style"
+            android:layout_margin="16dp"
+            android:text="@string/add"
+            android:layout_gravity="center_horizontal|center_vertical|end"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+

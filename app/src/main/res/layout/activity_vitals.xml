@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".Vitals">
+
+    <RelativeLayout
+        android:id="@+id/heart_rate_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-3dp">
+
+        <TextView
+            android:id="@+id/heart_rate_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/heart_rate"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/heart_rate_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/no_recent_data_hr"
+            android:textColor="@color/white"
+            android:layout_alignStart="@id/heart_rate_txt"
+            android:layout_alignBottom="@+id/heart_rate_txt"/>
+
+        <ImageButton
+            android:id="@+id/heart_rate_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/heart_rate_txt"
+            android:contentDescription="@string/heart_rate_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blood_pressure_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heart_rate_display">
+
+        <TextView
+            android:id="@+id/blood_pressure_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/blood_pressure"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/blood_pressure_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_alignStart="@id/blood_pressure_txt"
+            android:layout_alignBottom="@+id/blood_pressure_txt"
+            android:text="@string/no_recent_data_bp"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/blood_pressure_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/blood_pressure_txt"
+            android:contentDescription="@string/blood_pressure_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/body_temperature_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blood_pressure_display">
+
+        <TextView
+            android:id="@+id/body_temperature_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/body_temperature"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/body_temperature_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_alignStart="@id/body_temperature_txt"
+            android:layout_alignBottom="@+id/body_temperature_txt"
+            android:text="@string/no_recent_data_bt"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/body_temperature_btn"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/body_temperature_txt"
+            android:contentDescription="@string/body_temperature_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blood_glucose_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/body_temperature_display">
+
+        <TextView
+            android:id="@+id/blood_glucose_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/blood_glucose"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/blood_glucose_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_alignStart="@id/blood_glucose_txt"
+            android:layout_alignBottom="@+id/blood_glucose_txt"
+            android:text="@string/no_recent_data_bg"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/blood_glucose_btn"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/blood_glucose_txt"
+            android:contentDescription="@string/blood_glucose_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/oxygen_saturation_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blood_glucose_display">
+
+        <TextView
+            android:id="@+id/oxygen_saturation_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/oxygen_saturation"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/oxygen_saturation_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_alignStart="@id/oxygen_saturation_txt"
+            android:layout_alignBottom="@+id/oxygen_saturation_txt"
+            android:text="@string/no_recent_data_os"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/oxygen_saturation_btn"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/oxygen_saturation_txt"
+            android:contentDescription="@string/oxygen_saturation_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

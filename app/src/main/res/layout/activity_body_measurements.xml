@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".BodyMeasurements">
+
+
+
+    <RelativeLayout
+        android:id="@+id/height_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-3dp">
+
+        <TextView
+            android:id="@+id/height_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/height"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/height_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/no_recent_data_height"
+            android:textColor="@color/white"
+            android:layout_alignStart="@id/height_txt"
+            android:layout_alignBottom="@+id/height_txt"/>
+
+        <ImageButton
+            android:id="@+id/height_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/height_txt"
+            android:contentDescription="@string/height_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/weight_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height_display">
+
+        <TextView
+            android:id="@+id/weight_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/weight"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/weight_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_alignStart="@id/weight_txt"
+            android:layout_alignBottom="@+id/weight_txt"
+            android:text="@string/no_recent_data_weight"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/weight_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/weight_txt"
+            android:contentDescription="@string/weight_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/body_fat_percent_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_display">
+
+        <TextView
+            android:id="@+id/body_fat_percent_txt"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:padding="16dp"
+            android:text="@string/body_fat_percentage"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/body_fat_percent_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_alignStart="@id/body_fat_percent_txt"
+            android:layout_alignBottom="@+id/body_fat_percent_txt"
+            android:textColor="@color/white"
+            android:text="@string/no_recent_data_bfp"
+            />
+
+        <ImageButton
+            android:id="@+id/body_fat_percent_btn"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/body_fat_percent_txt"
+            android:contentDescription="@string/body_fat_percentage_details"
+            app:srcCompat="@drawable/ic_arrow_forward"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

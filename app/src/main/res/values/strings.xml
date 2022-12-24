@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">Healthcope</string>
+
+    <!-- JD -->
+    <string name="button_text">Edit</string>
+    <string name="username">John Doe</string>
+
+    <string name="heart_pulse_header">Heart Pulse</string>
+    <string name="heart_pulse_content">98</string>
+    <string name="heart_pulse_footer">avg bpm</string>
+
+    <string name="blood_pressure_header">Blood Pressure</string>
+    <string name="blood_pressure_content">72 | 120</string>
+    <string name="blood_pressure_footer">avg mmHg</string>
+
+    <string name="blood_oxygen_header">Blood Oxygen</string>
+    <string name="blood_oxygen_content">92%</string>
+    <string name="blood_oxygen_footer">avg spO2</string>
+
+    <string name="weight_header">Weight</string>
+    <string name="weight_content">73</string>
+    <string name="weight_footer">Kg</string>
+
+    <string name="temperature_header">Temperature</string>
+    <string name="temperature_content">37.6</string>
+    <string name="temperature_footer">Â°C</string>
+
+    <string name="calories_header">Calories</string>
+    <string name="calories_content">3100</string>
+    <string name="calories_footer">avg cal</string>
+
+    <string name="Health_report_header">Ongoing Health Report</string>
+    <string name="Health_report_date">10th - 20th October</string>
+
+    <string name="Emergency_contact_header">Emergency Contacts</string>
+    <string name="Emergency_contact_count">2 existing contacts</string>
+
+    <string name="Reminders_header">Reminders</string>
+    <string name="Reminders_count">2 active reminders</string>
+
+    <string name="view_button">View</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    <!-- Ben -->
+    <string name="dummy_text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere rhoncus aliquam. Vivamus luctus velit rhoncus felis rhoncus, a convallis diam sollicitudin. Donec vitae magna varius, congue ante quis, semper dui. Integer lectus sapien, convallis a purus ac, aliquet posuere lacus. Nam sed mauris at sapien convallis venenatis. Nullam at gravida dolor. Fusce scelerisque, ante finibus faucibus dictum, sem erat dignissim mi, vel tincidunt ante nisi ac magna. Pellentesque vestibulum placerat sapien, eu fringilla mi sodales ac. Fusce mi diam, volutpat sit amet faucibus quis, suscipit ut urna. Maecenas lacinia eleifend leo, sit amet mollis diam vestibulum vehicula. Suspendisse ullamcorper, arcu tempus ullamcorper luctus, sapien lectus tempor sem, eget mattis ipsum est in erat. In ut finibus nisi. Aliquam at tincidunt elit. Integer bibendum laoreet diam sed aliquam. Suspendisse gravida malesuada urna, vehicula sodales massa vestibulum non.
+        Donec vitae porta risus. Vestibulum imperdiet erat ut dui tempus eleifend. Vestibulum tempor sagittis odio, laoreet consectetur mi eleifend nec. Ut pellentesque blandit sem. Proin commodo tincidunt risus a rutrum. Etiam eu mi vitae nunc volutpat feugiat. Pellentesque non consequat tellus, vitae blandit neque. Suspendisse potenti. Mauris consectetur viverra dui vel faucibus. Integer in mauris id neque blandit semper.
+        Nulla in sapien neque. In maximus justo vel felis convallis condimentum. Mauris eu urna id massa venenatis sagittis. Nulla convallis magna quis scelerisque aliquet. Quisque vitae lacus quis justo convallis blandit vitae non risus. Integer quis malesuada mauris. Vestibulum vestibulum tortor at dui vehicula lacinia. Nunc tempor lobortis aliquet. Sed lacinia, enim quis auctor bibendum, justo lectus consectetur mi, ut posuere velit sapien sit amet libero. Aenean facilisis nisl et orci fermentum, vel placerat tortor lacinia. Sed congue ante est. Fusce eget magna et erat aliquam congue. Nunc eget neque vitae enim dapibus dictum sed vitae erat. In efficitur, massa rutrum convallis consequat, felis justo sodales augue, et accumsan nibh nulla sed velit. Sed id arcu et nunc mollis ullamcorper.
+        Mauris posuere sem eu nulla blandit, id malesuada velit volutpat. Mauris a vulputate elit. Morbi pharetra tortor quis odio cursus, quis dictum odio sagittis. Vestibulum viverra tempus nibh vel luctus. Sed metus ex, dapibus vulputate tellus vel, aliquet efficitur justo. Curabitur scelerisque urna vitae dignissim ornare. Donec congue dolor et magna ultricies, porta laoreet turpis imperdiet. Suspendisse eu dolor sollicitudin, convallis lorem vel, rhoncus libero. Sed a vestibulum ex. Curabitur vestibulum ipsum purus, nec fermentum ipsum vehicula sed. Mauris quis pellentesque ligula. Sed et turpis ac est tempor bibendum sit amet et tellus. Nunc laoreet egestas arcu ut rhoncus. Fusce et congue sem.
+        Quisque lobortis mollis venenatis. Quisque eu pulvinar nulla. Morbi urna libero, elementum ac viverra a, finibus id libero. Mauris ut sapien tempor, tincidunt urna eget, varius elit. Pellentesque non aliquet mauris. Mauris non velit interdum quam mattis venenatis vel at sem. Nam sit amet suscipit ipsum, et egestas erat. Quisque a congue sem. Duis imperdiet massa vitae ornare efficitur. Sed tincidunt mattis mi non sodales. Vestibulum eu risus lacinia, laoreet ante in, molestie est. Fusce congue, erat sit amet congue molestie, erat ligula fermentum velit, ac bibendum lacus mauris sit amet metus. Donec lobortis consequat ultrices. Vestibulum mi nibh, vehicula vel ex eu, mollis porttitor mauris. Aenean in iaculis justo, eget ultricies elit. Nunc sit amet scelerisque ligula.
+        In facilisis porttitor odio a volutpat. Maecenas malesuada sapien feugiat elit commodo egestas. Nam quis congue nulla. Quisque augue libero, bibendum id ex nec, ornare tincidunt purus. Curabitur varius lorem vel ante viverra, in pulvinar ante rutrum. Mauris nec hendrerit sapien. Duis a pretium justo, vel feugiat risus.
+        Vivamus consequat vulputate nunc nec cursus. Curabitur eget gravida enim, nec efficitur leo. Suspendisse potenti. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut eget est vitae purus volutpat ultricies. Vestibulum vel vulputate felis, id tempus dolor. Nunc sit amet lorem magna. In rhoncus augue at nulla vestibulum, eu malesuada purus interdum.
+        Nulla et ipsum dapibus, bibendum purus vitae, vulputate arcu. Aenean cursus ut nisi pharetra placerat. Mauris ultrices sodales ante. Donec aliquet finibus neque. Nulla eget vulputate nulla. Aliquam congue est enim, in accumsan libero aliquam ac. Sed vestibulum, ipsum vitae feugiat consectetur, ex neque scelerisque eros, id facilisis lacus felis id tellus. Pellentesque dignissim, ex et faucibus porttitor, nibh arcu porttitor est, non consequat diam felis vel dui. Curabitur libero ante, rhoncus quis pulvinar nec, commodo sit amet tortor. Integer maximus turpis finibus quam eleifend eleifend. Fusce quis odio pellentesque, lacinia urna quis, consectetur sem.
+        Nulla auctor, augue at pretium pharetra, risus dui porttitor urna, eu hendrerit libero dolor a quam. Curabitur tempus euismod enim rutrum tincidunt. Nunc mollis consequat leo, vel interdum ligula laoreet nec. Vivamus orci lorem, maximus ac blandit vel, bibendum pulvinar velit. Vestibulum id tortor eget ex luctus interdum mattis a elit. Nulla nunc nunc, gravida luctus diam sed, ultrices consequat elit. Donec vel placerat augue. Pellentesque vel purus tincidunt, feugiat lorem sed, mattis tellus. Praesent tortor quam, vulputate ac arcu non, volutpat consectetur urna. Morbi vehicula lorem neque, sit amet dignissim leo lacinia eget.
+        Phasellus a turpis nisl. Pellentesque id rhoncus ex. Donec eleifend commodo dui, a dapibus erat consectetur ac. Proin dapibus feugiat enim ultrices finibus. Pellentesque et mauris tellus. Duis finibus nisl nunc, non pellentesque tortor commodo quis. Morbi dapibus ex in lorem sagittis iaculis vitae sit amet odio. Nunc tempor massa erat, ut hendrerit neque malesuada non. Aenean viverra tristique pretium. Duis eleifend neque vitae leo porta vehicula finibus et ipsum. Pellentesque at magna orci. Sed vitae urna vel sem mollis dignissim ac eu erat. Maecenas vehicula metus gravida mattis pharetra. Duis egestas neque mollis tempor viverra.
+        In pulvinar odio nisi, eget semper leo lacinia vel. Etiam rhoncus est eu nunc posuere bibendum. Donec laoreet diam mi, ac sollicitudin tortor dapibus vitae. Curabitur viverra, augue sollicitudin fringilla volutpat, est sem fermentum mauris, euismod scelerisque enim lorem ac massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus porttitor id sapien at facilisis. Mauris porta ante a sollicitudin eleifend. In hac habitasse platea dictumst. Praesent semper tempor tortor sit amet ornare. Nam eu ligula et diam ultricies tincidunt vel tincidunt nisi. Pellentesque auctor, augue eget ornare convallis, justo dui bibendum massa, eget euismod nibh urna eu justo. Nullam nisl mi, interdum sit amet tempus a, faucibus a elit. Nullam bibendum sem quis odio ornare ultrices.
+    </string>
+
+    <string name="hello_users_d">Hello Users :D</string>
+    <string name="personal_health_log">Personal Health Log</string>
+    <string name="user_profile_image">User profile image</string>
+    <string name="how_re_you_feeling_today">How\'re you feeling today?</string>
+    <string name="analysis">Analysis</string>
+    <string name="view">View</string>
+    <string name="quality_is_not_an_act_it_is_a_habit">Quality is not an act, it is a habit!</string>
+    <string name="physical_ncondition">Physical\ncondition:</string>
+    <string name="mental_ncondition">Mental\ncondition:</string>
+    <string name="drug_nusage">Drug\nUsage:</string>
+    <string name="positive">Positive</string>
+    <string name="good">Good</string>
+    <string name="effective">Effective</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- KY -->
+
+    <string name="add">ADD</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="no_data">NoData</string>
+    <string name="no_data_heart_rate">NoDataHeartRate</string>
+    <string name="bpm">BPM</string>
+    <string name="add_data">ADD DATA</string>
+    <string name="kg">KG</string>
+    <string name="no_oxy_sat_data">No Oxy Sat Data</string>
+    <string name="percent">%</string>
+    <string name="cm">CM</string>
+    <string name="dd_mm_yyyy">DD-MM-YYYY</string>
+    <string name="hh_mm">HH:MM</string>
+    <string name="mmol_l">mmol/L</string>
+    <string name="celsius">C</string>
+    <string name="mmhg">mmHg</string>
+    <string name="average_health_score">Average Health Score</string>
+    <string name="vitals">Vitals</string>
+    <string name="measurement">Measurement</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="blood_glucose">Blood Glucose</string>
+    <string name="body_measurements">Body Measurements</string>
+    <string name="setting">Setting</string>
+    <string name="notifications">Notifications</string>
+    <string name="notification_txt">Shall we send you notification?</string>
+    <string name="password_settings">Password Settings</string>
+    <string name="notification_details">Notification Details</string>
+    <string name="password_txt">Reset/forgot password</string>
+    <string name="password_settings_details">Password_Settings_Details</string>
+    <string name="region_amp_time"><![CDATA[Region & Time]]></string>
+    <string name="malaysia_kuala_lumpur">Malaysia, Kuala Lumpur</string>
+    <string name="region_time_details">Region Time Details</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_pwd_content">Please enter the email address that you used to signed in</string>
+    <string name="email_address">Email Address</string>
+    <string name="no_recent_data_height">No Recent Data</string>
+    <string name="height_details">Height Details</string>
+    <string name="body_fat_percentage_details">Body Fat Percentage Details</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="weight_details">Weight Details</string>
+    <string name="body_fat_percentage">Body Fat Percentage</string>
+    <string name="no_recent_data_weight">No Recent Data</string>
+    <string name="no_recent_data_bfp">No Recent Data</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="heart_rate_details">Heart Rate Details</string>
+    <string name="body_temperature">Body Temperature</string>
+    <string name="body_temperature_details">Body Temperature Details</string>
+    <string name="blood_glucose_details">Blood Glucose Details</string>
+    <string name="oxygen_saturation">Oxygen Saturation</string>
+    <string name="oxygen_saturation_details">Oxygen Saturation Details</string>
+    <string name="no_recent_data_bg">No Recent Data</string>
+    <string name="no_recent_data_bp">No Recent Data</string>
+    <string name="no_recent_data_hr">No Recent Data</string>
+    <string name="blood_pressure_details">Blood Pressure Details</string>
+    <string name="no_recent_data_bt">No Recent Data</string>
+    <string name="no_recent_data_os">No Recent Data</string>
+    <string name="reset_link_content">A reset password link has been sent to your email. Kindly check your mailbox.</string>
+    <string name="app_updates">App updates</string>
+    <string name="region">Region</string>
+    <string name="time_zone">Time Zone</string>
+    <string name="none">--</string>
+    <string name="add_data_cancel">Cancel</string>
+    <string name="mmHg">mmHg</string>
+    <string name="blood_gluscose">Blood Gluscose</string>
+    <string name="c">c</string>
+    <string name="daily_health_score">Daily Health Score</string>
+
+
+</resources>
