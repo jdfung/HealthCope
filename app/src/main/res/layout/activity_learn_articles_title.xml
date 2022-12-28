@@ -6,16 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".LearnArticlesTitleActivity">
 
-    <androidx.cardview.widget.CardView
+    <Spinner
+        android:id="@+id/setInterestSpinner"
         android:layout_width="380dp"
-        android:layout_height="675dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="380dp"
+        android:layout_height="620dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/colorPrimaryVariant"
         app:cardCornerRadius="25dp"
         app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/setInterestSpinner">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,15 +44,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ListView
+                <ProgressBar
+                    android:id="@+id/articleTitleListProgressBar"
+                    style="@android:style/Widget.Holo.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/articleTitlesListView"
                     android:layout_width="350dp"
                     android:layout_height="match_parent"
                     android:nestedScrollingEnabled="true"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:listitem="@layout/simple_list_item" />
+                    tools:listitem="@layout/news_article_list_item" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

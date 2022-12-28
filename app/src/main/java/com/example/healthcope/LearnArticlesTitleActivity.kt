@@ -4,12 +4,26 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_learn_articles_title.*
-import kotlinx.android.synthetic.main.activity_learn_articles_topic.*
+import android.view.View
+import android.view.ViewParent
+import android.widget.*
+import android.widget.AdapterView.OnItemSelectedListener
+import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.model.NewsArticle
+import com.example.healthcope.viewModel.NewsViewModel
+import com.example.healthcope.viewModel.NewsViewModelFactory
 
-class LearnArticlesTitleActivity : AppCompatActivity() {
+class LearnArticlesTitleActivity : AppCompatActivity(), NewsListAdapter.NewsListOnItemClickListener, OnItemSelectedListener {
 
-    private lateinit var titlesArrayList: ArrayList<String>
+//    private val newsViewModel : NewsViewModel by viewModels {
+//        NewsViewModelFactory((application as NewsApplication).repositoryNews)
+//    }
+    private val newsViewModel : NewsViewModel by viewModels<NewsViewModel> {
+        NewsViewModelFactory((application as SingletonApplication).repositoryNews)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,43 +35,52 @@ class LearnArticlesTitleActivity : AppCompatActivity() {
 
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-        val topicName = arrayOf(
-            "TITLE_1",
-            "TITLE_2",
-            "TITLE_3",
-            "TITLE_4",
-            "TITLE_5",
-            "TITLE_6",
-            "TITLE_7",
-            "TITLE_8",
-            "TITLE_9",
-            "TITLE_10",
-            "TITLE_11",
-            "TITLE_12",
-            "TITLE_13"
-        )
+        val setInterestSpinner : Spinner = findViewById<Spinner>(R.id.setInterestSpinner)
+        val simpleAdapter : ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this, R.array.interestsList, android.R.layout.simple_spinner_item)
 
-        titlesArrayList = ArrayList()
+        simpleAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        setInterestSpinner.adapter = simpleAdapter
+        setInterestSpinner.onItemSelectedListener = this
 
-        for(i in topicName.indices){
-            titlesArrayList.add(topicName[i])
-        }
+        val rv = findViewById<RecyclerView>(R.id.articleTitlesListView)
+        val progressBar = findViewById<ProgressBar>(R.id.articleTitleListProgressBar)
 
-        val arrayAdapter = SimpleListAdapter(this, titlesArrayList)
-        articleTitlesListView.adapter = arrayAdapter
+        var newsArticlesCopy : List<NewsArticle>?
 
-        articleTitlesListView.setOnItemClickListener(){adapterView, view, position, id ->
-            val itemAtPos = adapterView.getItemAtPosition(position)
-            val itemIdAtPos = adapterView.getItemIdAtPosition(position)
+        newsViewModel.newsArticles.observe(this){
+            newsResponse ->
+            newsArticlesCopy = newsResponse.articles
 
-            val intent = Intent(this, LearnArticlesActivity::class.java)
-            startActivity(intent)
+            rv.layoutManager = LinearLayoutManager(this)
+            val adapter = NewsListAdapter(this)
+            rv.adapter = adapter
+            adapter.submitList(newsArticlesCopy)
+            progressBar.visibility = View.GONE
+            rv.visibility = View.VISIBLE
         }
 
     }
 
+    override fun onItemSelected(parent: AdapterView<*>?, view: View, position: Int, id: Long){
+        val interest : String = parent!!.getItemAtPosition(position).toString()
+
+        println("DEBUG: $interest")
+        newsViewModel.queryNews(interest)
+    }
+
+    override fun onNothingSelected(parent: AdapterView<*>?){
+
+    }
+
+    override fun onItemClick(position: Int) {
+        //Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, LearnArticlesActivity::class.java)
+        intent.putExtra("index", position)
+        startActivity(intent)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id: Int = item.getItemId()
+        val id: Int = item.itemId
         if (id == android.R.id.home) {
             onBackPressed()
             return true

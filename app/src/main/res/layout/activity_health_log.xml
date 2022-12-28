@@ -11,23 +11,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:nestedScrollingEnabled="false">
+        android:nestedScrollingEnabled="false"
+        tools:visibility="visible">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/dateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:text="DD/MM/YY"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/openMentalConditionActivityOpt"
+            app:layout_constraintBottom_toTopOf="@+id/cardView5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/openMentalConditionActivityOpt"
+            android:id="@+id/cardView5"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_marginTop="64dp"
@@ -36,7 +37,7 @@
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -49,15 +50,14 @@
                     android:layout_marginTop="8dp"
                     android:text="Mental condition"
                     android:textColor="@color/colorPrimary"
-                    app:layout_constraintBottom_toTopOf="@+id/cardView5"
+                    app:layout_constraintBottom_toTopOf="@+id/openMentalConditionActivityOpt"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView5"
+                    android:id="@+id/openMentalConditionActivityOpt"
                     android:layout_width="380dp"
                     android:layout_height="100dp"
                     app:cardBackgroundColor="@color/colorPrimaryVariant"
@@ -131,7 +131,7 @@
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/openMentalConditionActivityOpt">
+            app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

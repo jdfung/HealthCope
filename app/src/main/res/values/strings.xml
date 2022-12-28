@@ -152,5 +152,15 @@
     <string name="c">c</string>
     <string name="daily_health_score">Daily Health Score</string>
 
+    <string-array name="interestsList">
+        <item>Chronic illness</item>
+        <item>Arthritis</item>
+        <item>Asthma</item>
+        <item>Cancer</item>
+        <item>Chronic obstructive pulmonary disease</item>
+        <item>Diabetes</item>
+        <item>Heart disease</item>
+        <item>Obesity</item>
+    </string-array>
 
 </resources>

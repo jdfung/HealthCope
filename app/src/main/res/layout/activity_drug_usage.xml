@@ -6,18 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".DrugUsageActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/drugListCardView"
+    <EditText
+        android:id="@+id/addDrugEditText"
         android:layout_width="380dp"
-        android:layout_height="620dp"
-        android:layout_marginTop="32dp"
-        app:cardBackgroundColor="@color/colorPrimaryVariant"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Enter drug name."
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/addNewDrugBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/drugListCardView"
+        android:layout_width="380dp"
+        android:layout_height="580dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/colorPrimaryVariant"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNewDrugBtn">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -33,14 +46,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ListView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/drugListView"
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:nestedScrollingEnabled="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     tools:listitem="@layout/drug_list_item" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -51,15 +69,14 @@
     <Button
         android:id="@+id/addNewDrugBtn"
         android:layout_width="350dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/button_primary"
         android:elevation="0dp"
         android:text="Add Drug"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/drugListCardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drugListCardView" />
+        app:layout_constraintTop_toBottomOf="@+id/addDrugEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

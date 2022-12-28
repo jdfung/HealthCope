@@ -120,13 +120,6 @@
 
         <!-- Ben's Activity -->
         <activity
-            android:name=".LearnVideosActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".LearnArticlesActivity"
             android:exported="false">
             <meta-data
@@ -134,28 +127,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".LearnVideosTitleActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".LearnArticlesTitleActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".LearnVideosTopicActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".LearnArticlesTopicActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
