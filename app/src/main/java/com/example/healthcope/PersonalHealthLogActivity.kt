@@ -3,15 +3,20 @@ package com.example.healthcope
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_drug_usage.*
-import kotlinx.android.synthetic.main.activity_personal_health_log.*
+import android.view.View
+import android.widget.ProgressBar
+import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.model.HealthLog
 
-class PersonalHealthLogActivity : AppCompatActivity() {
+class PersonalHealthLogActivity : AppCompatActivity(), PersonalHealthLogAdapter.HealthLogOnItemClickListener {
 
-    private lateinit var personalHealthLog: ArrayList<HealthLog>
+    private val personalHealthLogViewModel : PersonalHealthLogViewModel by viewModels {
+        PersonalHealthLogViewModelFactory((application as SingletonApplication).repositoryPersonalHealthLog)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,31 +28,41 @@ class PersonalHealthLogActivity : AppCompatActivity() {
 
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-        val healthLogTitle = arrayOf("Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY",
-            "Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY","Health log at DD/MM/YY")
+        lateinit var personalHealthLogCopy : List<HealthLog>
 
-        personalHealthLog = ArrayList()
+        val rv = findViewById<RecyclerView>(R.id.personalHealthLogListView)
+        val progressBar = findViewById<ProgressBar>(R.id.progress_bar)
 
-        for(i in healthLogTitle.indices){
-            val title = HealthLog(healthLogTitle[i])
-            personalHealthLog.add(title)
+        personalHealthLogViewModel.personalHealthLog.observe(this) {
+                personalHealthLog ->
+
+            personalHealthLogCopy = personalHealthLog
+
+            rv.layoutManager = LinearLayoutManager(this)
+            val adapter = PersonalHealthLogAdapter(this)
+            rv.adapter = adapter
+            adapter.submitList(personalHealthLogCopy)
+            progressBar.visibility = View.GONE
+            rv.visibility = View.VISIBLE
         }
+    }
 
-        val arrayAdapter = PersonalHealthLogAdapter(this, personalHealthLog)
-        personalHealthLogListView.adapter = arrayAdapter
+    override fun onItemClick(healthLog: HealthLog) {
+//        val print : String = healthLog?.date ?: "yyyy-mm-dd"
+//        Toast.makeText(this, "Item $print clicked", Toast.LENGTH_SHORT).show()
+        val healthLogID : Int = healthLog.healthLogID
 
-        personalHealthLogListView.setOnItemClickListener(){adapterView, view, position, id ->
-            val itemAtPos = adapterView.getItemAtPosition(position)
-            val itemIdAtPos = adapterView.getItemIdAtPosition(position)
+        personalHealthLogViewModel.loadHealthLogByID(healthLogID)
+        personalHealthLogViewModel.loadMentalConditionRecordEntryByID(healthLogID)
+        personalHealthLogViewModel.loadPhysicalConditionRecordEntryByID(healthLogID)
+        personalHealthLogViewModel.loadDrugUsageRecordByID(healthLogID)
 
-            val intent = Intent(this, HealthLogActivity::class.java)
-            startActivity(intent)
-        }
-
+        val intent = Intent(this, HealthLogActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id: Int = item.getItemId()
+        val id: Int = item.itemId
         if (id == android.R.id.home) {
             onBackPressed()
             return true

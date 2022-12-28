@@ -13,15 +13,10 @@ class LearnActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_learn)
 
-        setSupportActionBar(learnToolbar)
+        //setSupportActionBar(learnToolbar)
 
         discoverArticlesBtn.setOnClickListener{
-            val intent = Intent(this, LearnArticlesTopicActivity::class.java)
-            startActivity(intent)
-        }
-
-        discoverVideosBtn.setOnClickListener{
-            val intent = Intent(this, LearnVideosTopicActivity::class.java)
+            val intent = Intent(this, LearnArticlesTitleActivity::class.java)
             startActivity(intent)
         }
 
@@ -42,17 +37,17 @@ class LearnActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_learn, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id: Int = item.getItemId()
-        if (id == R.id.interest_setting) {
-            val intent = Intent(this, SetInterestsActivity::class.java)
-            startActivity(intent)
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.menu_learn, menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        val id: Int = item.itemId
+//        if (id == R.id.interest_setting) {
+//            val intent = Intent(this, SetInterestsActivity::class.java)
+//            startActivity(intent)
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 }

@@ -3,14 +3,22 @@ package com.example.healthcope
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_drug_usage.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.model.DrugUsageRecord
+import com.example.healthcope.model.DrugUsageRecordEntry
 
-class DrugUsageActivity : AppCompatActivity() {
+class DrugUsageActivity : AppCompatActivity(), DrugListAdapter.DrugListOnItemClickListener {
 
-    private lateinit var drugArrayList: ArrayList<Drug>
+    private val personalHealthLogViewModel : PersonalHealthLogViewModel by viewModels<PersonalHealthLogViewModel> {
+        PersonalHealthLogViewModelFactory((application as SingletonApplication).repositoryPersonalHealthLog)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,74 +30,66 @@ class DrugUsageActivity : AppCompatActivity() {
 
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-        val drugName = arrayOf(
-            "DRUG_1",
-            "DRUG_2",
-            "DRUG_3",
-            "DRUG_4",
-            "DRUG_5",
-            "DRUG_6",
-            "DRUG_7",
-            "DRUG_8",
-            "DRUG_9",
-            "DRUG_10",
-            "DRUG_11",
-            "DRUG_12",
-            "DRUG_13"
-        )
+        val rv = findViewById<RecyclerView>(R.id.drugListView)
+        //val progressBar = findViewById<ProgressBar>(R.id.progress_bar)
 
-        val rating = arrayOf( 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3)
+        lateinit var drugUsageRecordCopy : DrugUsageRecord
+        val heathLogID : Int = personalHealthLogViewModel.drugUsageRecordByID.value!!.healthLogID
+        lateinit var drugUsageRecordEntriesCopy : MutableList<DrugUsageRecordEntry>
 
-        val description = arrayOf(
-            "TEXT_1",
-            "TEXT_2",
-            "TEXT_3",
-            "TEXT_4",
-            "TEXT_5",
-            "TEXT_6",
-            "TEXT_7",
-            "TEXT_8",
-            "TEXT_9",
-            "TEXT_10",
-            "TEXT_11",
-            "TEXT_12",
-            "TEXT_13",
-        )
+        personalHealthLogViewModel.drugUsageRecordByID.observe(this) {
+                drugUsageRecord ->
+            drugUsageRecordCopy = drugUsageRecord
+            drugUsageRecordEntriesCopy = drugUsageRecord.drugUsageRecord
 
-        drugArrayList = ArrayList()
-
-        for(i in drugName.indices){
-            val drug = Drug(drugName[i], rating[i], description[i])
-            drugArrayList.add(drug)
+            rv.layoutManager = LinearLayoutManager(this)
+            val adapter = DrugListAdapter(this)
+            rv.adapter = adapter
+            adapter.submitList(drugUsageRecordEntriesCopy)
+            //progressBar.visibility = View.GONE
+            //rv.visibility = View.VISIBLE
         }
 
-        drugListView.isClickable = true
+        val addNewDrugButton : Button = findViewById<Button>(R.id.addNewDrugBtn)
 
-        val drugListAdapter = DrugListAdapter(this, drugArrayList)
-        drugListView.adapter = drugListAdapter
+        addNewDrugButton.setOnClickListener{
+//            val drugUsageRecord : DrugUsageRecord = personalHealthLogViewModel.drugUsageRecord.value!!
+//            val heathLogID : Int = drugUsageRecord.healthLogID
+//            val drugUsageRecordEntries : MutableList<DrugUsageRecordEntry> = drugUsageRecord.drugUsageRecord
 
-        drugListView.setOnItemClickListener(){adapterView, view, position, id ->
-            val itemAtPos = adapterView.getItemAtPosition(position)
-            val itemIdAtPos = adapterView.getItemIdAtPosition(position)
+            val addDrugEditText : EditText = findViewById<EditText>(R.id.addDrugEditText)
 
-            val intent = Intent(this, DrugEffectivenessActivity::class.java)
-            startActivity(intent)
-        }
+            val drugName : String = addDrugEditText.text.toString()
 
-        addNewDrugBtn.setOnClickListener{
-            val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_add_new_drug,null)
+            if(drugName != ""){
+                val newDrugUsageRecordEntry = DrugUsageRecordEntry(drugName, 2, "")
+                drugUsageRecordEntriesCopy.add(newDrugUsageRecordEntry)
 
-            val mBuilder = AlertDialog.Builder(this)
-                .setView(mDialogView)
-                .setTitle("Add new drug")
+                drugUsageRecordCopy.drugUsageRecord = drugUsageRecordEntriesCopy
 
-            val mAlertDialog=mBuilder.show()
+                personalHealthLogViewModel.putDrugUsageRecordByID(heathLogID, drugUsageRecordCopy)
 
+                Toast.makeText(this, "¯Added successfully!", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, DrugUsageActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            else{
+                Toast.makeText(this, "¯\\_(ツ)_/¯", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
+    override fun onItemClick(position: Int) {
+        //Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, DrugEffectivenessActivity::class.java)
+        intent.putExtra("index", position)
+        startActivity(intent)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id: Int = item.getItemId()
+        val id: Int = item.itemId
         if (id == android.R.id.home) {
             onBackPressed()
             return true
