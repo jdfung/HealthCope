@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".reminders_page">
 
-    <ListView
+    <!--<ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,20 +14,34 @@
         android:background="@drawable/top_button_background"
         android:backgroundTint="@color/colorPrimaryVariant"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="15dp"></ListView>
+        tools:layout_editor_absoluteX="15dp"></ListView> -->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/list"
-        android:gravity="center">
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btn_reminder"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_add_circle"
-            tools:ignore="ContentDescription"/>
-    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/list"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginBottom="8dp"
+         android:scrollbars="vertical"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         tools:listitem="@layout/emergency_contact_view_item" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toBottomOf="@+id/list"
+         android:gravity="center">
+         <androidx.appcompat.widget.AppCompatImageButton
+             android:id="@+id/btn_reminder"
+             android:layout_width="wrap_content"
+             android:layout_height="50dp"
+             android:background="@android:color/transparent"
+             android:src="@drawable/ic_add_circle"
+             tools:ignore="ContentDescription"/>
+     </LinearLayout>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>

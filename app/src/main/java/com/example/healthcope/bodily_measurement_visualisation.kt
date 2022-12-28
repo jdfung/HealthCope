@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.LineChart
@@ -20,11 +21,37 @@ class bodily_measurement_visualisation : AppCompatActivity() {
     lateinit var lineChart3: LineChart
     lateinit var lineEntriesList: ArrayList<Entry>
 
+    lateinit var avgWeight: TextView
+    lateinit var highestWeight: TextView
+    lateinit var avgFat: TextView
+    lateinit var highestFat: TextView
+    lateinit var avgTemp: TextView
+    lateinit var highestTemp: TextView
+
     lateinit var toolbar: androidx.appcompat.widget.Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bodily_measurement_visualisation)
+
+        val weightDataList = intent.getIntegerArrayListExtra("weightData")
+        val bodyTempDataList = intent.getIntegerArrayListExtra("bodyTempData")
+        val bodyFatDataList = intent.getIntegerArrayListExtra("bodyFatData")
+
+        avgWeight = findViewById(R.id.averageWeight)
+        avgWeight.text = weightDataList?.average().toString()
+        highestWeight = findViewById(R.id.highestWeight)
+        highestWeight.text = weightDataList?.maxOrNull().toString()
+
+        avgFat = findViewById(R.id.averageFat)
+        avgFat.text = bodyFatDataList?.average().toString()
+        highestFat = findViewById(R.id.highestFat)
+        highestFat.text = bodyFatDataList?.maxOrNull().toString()
+
+        avgTemp = findViewById(R.id.averageTemp)
+        avgTemp.text = bodyTempDataList?.average().toString()
+        highestTemp = findViewById(R.id.highestTemp)
+        highestTemp.text = bodyTempDataList?.maxOrNull().toString()
 
         val actionBar = supportActionBar
         actionBar!!.title = "Bodily Measurements"
@@ -33,19 +60,25 @@ class bodily_measurement_visualisation : AppCompatActivity() {
         lineChart1 = findViewById(R.id.idLineChart1)
         lineChart2 = findViewById(R.id.idLineChart2)
         lineChart3 = findViewById(R.id.idLineChart3)
-        setLineChartData(lineChart1, R.color.grey)
-        setLineChartData(lineChart2, R.color.blue)
-        setLineChartData(lineChart3, R.color.orange)
+        setLineChartData(lineChart1, R.color.grey, weightDataList)
+        setLineChartData(lineChart2, R.color.blue, bodyTempDataList)
+        setLineChartData(lineChart3, R.color.orange, bodyFatDataList)
     }
 
-    fun setLineChartData(chart: LineChart, SpeciColor: Int) {
+    fun setLineChartData(chart: LineChart, SpeciColor: Int, list: java.util.ArrayList<Int>?) {
 
         val linevalues = ArrayList<Entry>()
-        linevalues.add(Entry(20f, 89f))
-        linevalues.add(Entry(30f, 75f))
-        linevalues.add(Entry(40f, 92f))
-        linevalues.add(Entry(50f, 86f))
-        linevalues.add(Entry(60f, 77f))
+        if(list != null) {
+            for (item in 0 until list.orEmpty().size) {
+
+                linevalues.add(
+                    Entry(
+                        item.toFloat() + 1f,
+                        list[item].toFloat()
+                    )
+                )
+            }
+        }
 
 
         val linedataset = LineDataSet(linevalues, "First")
