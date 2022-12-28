@@ -84,6 +84,7 @@
                 android:textSize="12sp"
                 />
             <TextView
+                android:id="@+id/averageHeartRate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/heart_pulse_content"
@@ -120,6 +121,7 @@
                 android:textSize="12sp"
                 />
             <TextView
+                android:id="@+id/averageBloodP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoSizeTextType="uniform"
@@ -158,6 +160,7 @@
                 android:textSize="12sp"
                 />
             <TextView
+                android:id="@+id/averageBloodO"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/blood_oxygen_content"
@@ -202,6 +205,7 @@
                 android:textSize="12sp"
                 />
             <TextView
+                android:id="@+id/averageWeightAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/weight_content"
@@ -238,6 +242,7 @@
                 android:textSize="12sp"
                 />
             <TextView
+                android:id="@+id/averageTempAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/temperature_content"
@@ -274,6 +279,7 @@
                 android:textSize="12sp"
                 />
             <TextView
+                android:id="@+id/averageFatAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/calories_content"
@@ -308,21 +314,14 @@
         <TextView
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/Health_report_header"
             android:layout_marginStart="13dp"
+            android:gravity="center_vertical"
             android:textSize="20sp"
             android:textColor="@color/white"
             android:textStyle="bold" />
-        <TextView
-            android:layout_alignParentTop="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Health_report_date"
-            android:textColor="@color/white"
-            android:layout_marginTop="28dp"
-            android:layout_marginStart="13dp"
-            android:textSize="14sp" />
+
 
         <Button
             android:id="@+id/open_health_report_btn"
@@ -359,6 +358,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
         <TextView
+            android:id="@+id/activeContact"
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -404,6 +404,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/activeReminders"
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

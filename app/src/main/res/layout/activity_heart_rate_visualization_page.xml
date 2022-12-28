@@ -83,6 +83,7 @@
                         android:textSize="12sp"></TextView>
 
                     <TextView
+                        android:id="@+id/averageBPM"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="3dp"
@@ -119,6 +120,7 @@
                         android:textSize="12sp"></TextView>
 
                     <TextView
+                        android:id="@+id/highestBPM"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="3dp"

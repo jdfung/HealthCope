@@ -7,14 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ArrayAdapter
-import androidx.databinding.DataBindingUtil
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.healthcope.databinding.FragmentAddReminderFragBinding
 import com.example.healthcope.databinding.FragmentDialogWithDataBinding
 
 
+
 class DialogWithData: DialogFragment() {
+
 
     companion object {
 
@@ -37,7 +38,6 @@ class DialogWithData: DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-
         val arrayAdapter: ArrayAdapter<*>
         val myArrayList = arrayListOf<String>()
 
@@ -66,6 +66,8 @@ class DialogWithData: DialogFragment() {
         binding.btnSubmit.setOnClickListener {
             val hour = binding.timePicker.hour.toString()
             val minute = binding.timePicker.minute.toString()
+
+//            val time = binding.timePicker.hour()
             val drugName = array.joinToString(separator = ", ")
 
             if(drugName.isEmpty())
@@ -73,15 +75,15 @@ class DialogWithData: DialogFragment() {
                 binding.etTxt.setError("Input drug names for intake reminder")
             }
             else {
-                viewModel.sendName(hour + ": " + minute + "\n" + drugName)
+                viewModel.sendName("$hour:$minute\n$drugName")
                 dismiss()
             }
+
         }
 
         binding.btnCancel.setOnClickListener{
             dismiss()
         }
     }
-
 
 }

@@ -83,6 +83,7 @@
                         android:autoSizeStepGranularity="2sp"></TextView>
 
                     <TextView
+                        android:id="@+id/averageFat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="3100"
@@ -127,6 +128,7 @@
                         android:autoSizeStepGranularity="2sp"></TextView>
 
                     <TextView
+                        android:id="@+id/highestFat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="4700"
@@ -142,7 +144,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/heart_pulse_footer"
+                        android:text="@string/calories_footer"
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:autoSizeTextType="uniform"
@@ -234,6 +236,7 @@
                         android:autoSizeStepGranularity="2sp"></TextView>
 
                     <TextView
+                        android:id="@+id/averageTemp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="37.6"
@@ -278,6 +281,7 @@
                         android:autoSizeStepGranularity="2sp"></TextView>
 
                     <TextView
+                        android:id="@+id/highestTemp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="38.8"
@@ -288,7 +292,7 @@
                         android:autoSizeMaxTextSize="100sp"
                         android:autoSizeStepGranularity="2sp"
                         android:textStyle="bold"
-                        android:textColor="#fac100"></TextView>
+                        android:textColor="@color/red"></TextView>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -384,6 +388,7 @@
                         android:autoSizeStepGranularity="2sp"></TextView>
 
                     <TextView
+                        android:id="@+id/averageWeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="76 - 89"
@@ -419,7 +424,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Active"
+                        android:text="Highest"
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:autoSizeTextType="uniform"
@@ -428,6 +433,7 @@
                         android:autoSizeStepGranularity="2sp"></TextView>
 
                     <TextView
+                        android:id="@+id/highestWeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="102 - 134"
@@ -438,12 +444,12 @@
                         android:autoSizeMaxTextSize="100sp"
                         android:autoSizeStepGranularity="2sp"
                         android:textStyle="bold"
-                        android:textColor="#fac100"></TextView>
+                        android:textColor="@color/red"></TextView>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/heart_pulse_footer"
+                        android:text="@string/weight_footer"
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:autoSizeTextType="uniform"

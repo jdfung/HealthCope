@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.widget.TextView
+import com.example.healthcope.model.userHealthStatus
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.LineChart
@@ -17,33 +19,48 @@ class blood_oxygen_visualisation : AppCompatActivity() {
     lateinit var barDataSet: BarDataSet
     lateinit var barEntriesList: ArrayList<BarEntry>
 
+    lateinit var avgBO: TextView
+
     lateinit var lineChart: LineChart
     lateinit var lineEntriesList: ArrayList<Entry>
 
     lateinit var toolbar: androidx.appcompat.widget.Toolbar
 
+    var userHealthStats = ongoing_health_report_page()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blood_oxygen_visualisation)
+
+        val dataList = intent.getIntegerArrayListExtra("bloodOxygenData")
+
+        avgBO = findViewById(R.id.averageBO)
+        avgBO.text = dataList?.average().toString()
 
         val actionBar = supportActionBar
         actionBar!!.title = "Blood Oxygen Visualisation"
         actionBar!!.setDisplayHomeAsUpEnabled(true)
 
         barChart = findViewById(R.id.idBarChart)
-        setBarChartData()
+        setBarChartData(dataList)
 
         lineChart = findViewById(R.id.idLineChart)
-        setLineChartData()
+        setLineChartData(dataList)
     }
 
-    private fun setBarChartData() {
+    private fun setBarChartData(list: java.util.ArrayList<Int>?) {
         barEntriesList = ArrayList()
-        barEntriesList.add(BarEntry(1f, 89f))
-        barEntriesList.add(BarEntry(2f, 75f))
-        barEntriesList.add(BarEntry(3f, 92f))
-        barEntriesList.add(BarEntry(4f, 86f))
-        barEntriesList.add(BarEntry(5f, 77f))
+        if(list != null) {
+            for (item in 0 until list.orEmpty().size) {
+
+                barEntriesList.add(
+                    BarEntry(
+                        item.toFloat() + 1f,
+                        list[item].toFloat()
+                    )
+                )
+            }
+        }
 
         barDataSet = BarDataSet(barEntriesList, "Bar Chart Data")
         barData = BarData(barDataSet)
@@ -55,15 +72,20 @@ class blood_oxygen_visualisation : AppCompatActivity() {
         barChart.animateXY(500, 500, Easing.EaseInCubic)
     }
 
-    fun setLineChartData() {
+    fun setLineChartData(list: java.util.ArrayList<Int>?) {
 
         val linevalues = ArrayList<Entry>()
-        linevalues.add(Entry(20f, 89f))
-        linevalues.add(Entry(30f, 75f))
-        linevalues.add(Entry(40f, 92f))
-        linevalues.add(Entry(50f, 86f))
-        linevalues.add(Entry(60f, 77f))
+        if(list != null) {
+            for (item in 0 until list.orEmpty().size) {
 
+                linevalues.add(
+                    Entry(
+                        item.toFloat() + 1f,
+                        list[item].toFloat()
+                    )
+                )
+            }
+        }
 
         val linedataset = LineDataSet(linevalues, "First")
         //We add features to our chart
