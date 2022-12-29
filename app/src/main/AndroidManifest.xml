@@ -16,6 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcope">
         <activity
+            android:name=".LearnVideosTitleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LearnVideosActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".viewBodyMeasurementData"
             android:exported="false">
             <meta-data
