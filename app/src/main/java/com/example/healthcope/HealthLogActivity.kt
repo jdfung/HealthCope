@@ -57,10 +57,10 @@ class HealthLogActivity() : AppCompatActivity() {
 
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu_health_log, menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_health_log, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id: Int = item.itemId
@@ -69,15 +69,15 @@ class HealthLogActivity() : AppCompatActivity() {
             return true
             finish()
         }
-//        if (id == R.id.share) {
-//            val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_share,null)
-//
-//            val mBuilder = AlertDialog.Builder(this)
-//                .setView(mDialogView)
-//                .setTitle("Share")
-//
-//            val mAlertDialog=mBuilder.show()
-//        }
+        if (id == R.id.share) {
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_share,null)
+
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+                .setTitle("Share")
+
+            val mAlertDialog=mBuilder.show()
+        }
         return super.onOptionsItemSelected(item)
     }
 }

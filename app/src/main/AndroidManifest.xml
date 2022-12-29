@@ -14,8 +14,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcope">
-
-        <!-- JD's Activity -->
+        <activity
+            android:name=".LearnVideosTitleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LearnVideosActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity> <!-- JD's Activity -->
         <activity
             android:name=".User_Profile"
             android:exported="false">
@@ -35,7 +47,6 @@
             android:name=".Forgot_password"
             android:exported="false"
             android:parentActivityName=".Login">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -56,6 +67,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -114,10 +126,7 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-
-        <!-- Ben's Activity -->
+        </activity> <!-- Ben's Activity -->
         <activity
             android:name=".LearnArticlesActivity"
             android:exported="false">
@@ -193,13 +202,10 @@
             android:name=".ManagePersonalHealthActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- KY Activity -->
+        </activity> <!-- KY Activity -->
         <activity
             android:name=".BodyMeasurements"
             android:exported="false">
@@ -364,13 +370,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
     </application>
 
 </manifest>

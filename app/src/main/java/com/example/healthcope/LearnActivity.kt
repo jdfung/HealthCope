@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_learn.*
 import kotlinx.android.synthetic.main.activity_manage_personal_health.*
 
@@ -17,6 +18,13 @@ class LearnActivity : AppCompatActivity() {
 
         discoverArticlesBtn.setOnClickListener{
             val intent = Intent(this, LearnArticlesTitleActivity::class.java)
+            startActivity(intent)
+        }
+
+        val discoverVideosBtn : Button = findViewById<Button>(R.id.discoverVideosBtn)
+
+        discoverVideosBtn.setOnClickListener{
+            val intent = Intent(this, LearnVideosTitleActivity::class.java)
             startActivity(intent)
         }
 
