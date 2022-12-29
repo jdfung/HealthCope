@@ -10,14 +10,14 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.model.DrugUsageRecord
 import com.example.healthcope.model.DrugUsageRecordEntry
 
 class DrugUsageActivity : AppCompatActivity(), DrugListAdapter.DrugListOnItemClickListener {
 
     private val personalHealthLogViewModel : PersonalHealthLogViewModel by viewModels<PersonalHealthLogViewModel> {
-        PersonalHealthLogViewModelFactory((application as SingletonApplication).repositoryPersonalHealthLog)
+        PersonalHealthLogViewModelFactory((application as HealthCopeApplication).repositoryPersonalHealthLog)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

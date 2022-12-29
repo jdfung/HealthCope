@@ -18,6 +18,12 @@ interface Retrofit_API {
     @GET("/HealthStatus")
     fun getAllStatus(): Call<List<userHealthStatus>>
 
+    @POST("/HealthStatus")
+    suspend fun addHealthStatus(@Body status: userHealthStatus): Response<userHealthStatus>
+
+    @PUT("/HealthStatus/{id}")
+    suspend fun updateHealthStatus(@Path("id") id: Int, @Body status: userHealthStatus): Response<userHealthStatus>
+
     @GET("/Reminders")
     fun getAllReminders(): Call<List<Reminders>>
 
@@ -29,5 +35,8 @@ interface Retrofit_API {
 
     @POST("/userAccount")
     suspend fun register(@Body account: userAccount): Response<userAccount>
+
+    @PUT("/userAccount/{id}")
+    suspend fun updatePassword(@Path("id") id: Int, @Body account: userAccount): Response<userAccount>
 
 }

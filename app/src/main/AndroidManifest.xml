@@ -2,10 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
     <application
-        android:name=".HealthCopeApplication"
+        android:name=".application.HealthCopeApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,9 +15,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcope">
-    <receiver android:name=".Notification"
-        android:enabled="true"/>
-        <!-- JD's Activity -->
+        <activity
+            android:name=".viewBodyMeasurementData"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".addBodyMeasurementData"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".addVitalsData"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".viewVitalsData"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <receiver
+            android:name=".Notification"
+            android:enabled="true" /> <!-- JD's Activity -->
         <activity
             android:name=".User_Profile"
             android:exported="false">
@@ -36,7 +66,6 @@
             android:name=".Forgot_password"
             android:exported="false"
             android:parentActivityName=".Login">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -57,6 +86,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -115,10 +145,7 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-
-        <!-- Ben's Activity -->
+        </activity> <!-- Ben's Activity -->
         <activity
             android:name=".LearnArticlesActivity"
             android:exported="false">
@@ -194,13 +221,10 @@
             android:name=".ManagePersonalHealthActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-
-        <!-- KY Activity -->
+        </activity> <!-- KY Activity -->
         <activity
             android:name=".BodyMeasurements"
             android:exported="false">
@@ -365,13 +389,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
     </application>
 
 </manifest>

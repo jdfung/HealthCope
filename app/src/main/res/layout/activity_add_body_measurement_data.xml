@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addVitalsData">
+
+    <LinearLayout
+        android:id="@+id/viewDate"
+        android:clickable="true"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="Today"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDate">
+
+        <LinearLayout
+            android:id="@+id/heartRateCell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/main_background"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:text="@string/height"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <EditText
+                android:id="@+id/heightInput"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:inputType="number"
+                android:hint="cm"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/main_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:text="@string/weight"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <EditText
+                android:id="@+id/weightInput"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:inputType="number"
+                android:hint="kg"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/main_background"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heartRateCell">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:text="Body Fat"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <EditText
+                android:id="@+id/bodyFatInput"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:inputType="numberDecimal"
+                android:hint="%"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/measurement_add_btn"
+            style="@style/data_button_style"
+            android:layout_margin="16dp"
+            android:text="@string/add"
+            android:layout_gravity="center_horizontal|center_vertical"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

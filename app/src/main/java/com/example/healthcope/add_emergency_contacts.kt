@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.model.EmergencyContact
 import com.example.mvvmroomgroup2.emergencyContactAdapter
 import kotlinx.coroutines.Dispatchers
@@ -33,16 +34,6 @@ class add_emergency_contacts : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar!!.title = "Emergency Contacts"
         actionBar.setDisplayHomeAsUpEnabled(true)
-
-        //val arrayAdapter: ArrayAdapter<*>
-        //val myArrayList = ArrayList<String>()
-
-        //myArrayList.add("012-3456789")
-        //myArrayList.add("012-7567463")
-
-        //var mListView = findViewById<ListView>(R.id.list)
-        //arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, myArrayList)
-        //mListView.adapter = arrayAdapter
 
         val recyclerview = findViewById<RecyclerView>(R.id.list)
 

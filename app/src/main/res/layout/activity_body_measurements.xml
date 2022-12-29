@@ -12,8 +12,9 @@
     <RelativeLayout
         android:id="@+id/height_display"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_margin="16dp"
+        android:padding="10dp"
         android:background="@drawable/main_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,29 +23,17 @@
         <TextView
             android:id="@+id/height_txt"
             android:layout_width="260dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="4dp"
-            android:padding="16dp"
-            android:text="@string/height"
+            android:gravity="center_vertical"
+            android:text="View data"
             android:textColor="@color/white"
             android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-
-        <TextView
-            android:id="@+id/height_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:text="@string/no_recent_data_height"
-            android:textColor="@color/white"
-            android:layout_alignStart="@id/height_txt"
-            android:layout_alignBottom="@+id/height_txt"/>
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"  />
 
         <ImageButton
-            android:id="@+id/height_btn"
+            android:id="@+id/viewMeasurement_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
@@ -57,10 +46,11 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/weight_display"
+        android:id="@+id/blood_pressure_display"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_margin="16dp"
+        android:padding="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="128dp"
         android:background="@drawable/main_background"
@@ -68,85 +58,29 @@
         app:layout_constraintTop_toBottomOf="@id/height_display">
 
         <TextView
-            android:id="@+id/weight_txt"
+            android:id="@+id/blood_pressure_txt"
             android:layout_width="260dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="4dp"
-            android:padding="16dp"
-            android:text="@string/weight"
+            android:gravity="center_vertical"
+            android:text="Add new data"
             android:textColor="@color/white"
             android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"  />
 
-
-        <TextView
-            android:id="@+id/weight_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:layout_alignStart="@id/weight_txt"
-            android:layout_alignBottom="@+id/weight_txt"
-            android:text="@string/no_recent_data_weight"
-            android:textColor="@color/white"/>
 
         <ImageButton
-            android:id="@+id/weight_btn"
+            android:id="@+id/add_body_measurement_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/weight_txt"
-            android:contentDescription="@string/weight_details"
+            android:layout_toEndOf="@+id/blood_pressure_txt"
+            android:contentDescription="@string/blood_pressure_details"
             app:srcCompat="@drawable/ic_arrow_forward"
             android:background="@null"/>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/body_fat_percent_display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:background="@drawable/main_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/weight_display">
-
-        <TextView
-            android:id="@+id/body_fat_percent_txt"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:padding="16dp"
-            android:text="@string/body_fat_percentage"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-        <TextView
-            android:id="@+id/body_fat_percent_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:layout_alignStart="@id/body_fat_percent_txt"
-            android:layout_alignBottom="@+id/body_fat_percent_txt"
-            android:textColor="@color/white"
-            android:text="@string/no_recent_data_bfp"
-            />
-
-        <ImageButton
-            android:id="@+id/body_fat_percent_btn"
-            android:layout_width="48dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/body_fat_percent_txt"
-            android:contentDescription="@string/body_fat_percentage_details"
-            app:srcCompat="@drawable/ic_arrow_forward"
-            android:background="@null"/>
-
-    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

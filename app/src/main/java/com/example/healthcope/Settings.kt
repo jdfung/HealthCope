@@ -11,18 +11,16 @@ class Settings : AppCompatActivity() {
 
     lateinit var notification_set: ImageButton
     lateinit var password_set: ImageButton
-    lateinit var region_time_set: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
         val actionBar = supportActionBar
-        actionBar!!.title = "Setting"
+        actionBar!!.title = "Settings"
         actionBar!!.setDisplayHomeAsUpEnabled(true)
 
         notification_set = findViewById((R.id.notification_btn))
         password_set = findViewById((R.id.password_btn))
-        region_time_set = findViewById((R.id.region_time_btn))
 
         notification_set.setOnClickListener {
             val Intent = Intent(this, Notifications::class.java)
@@ -34,10 +32,6 @@ class Settings : AppCompatActivity() {
             startActivity(Intent)
         }
 
-        region_time_set.setOnClickListener {
-            val Intent = Intent(this, RegionAndTime::class.java)
-            startActivity(Intent)
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

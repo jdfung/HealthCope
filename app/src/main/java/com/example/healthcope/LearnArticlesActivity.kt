@@ -4,11 +4,9 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.viewModels
-import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.model.NewsArticle
 import com.example.healthcope.viewModel.NewsViewModel
 import com.example.healthcope.viewModel.NewsViewModelFactory
@@ -16,7 +14,7 @@ import com.example.healthcope.viewModel.NewsViewModelFactory
 class LearnArticlesActivity : AppCompatActivity() {
 
     private val newsViewModel : NewsViewModel by viewModels<NewsViewModel> {
-        NewsViewModelFactory((application as SingletonApplication).repositoryNews)
+        NewsViewModelFactory((application as HealthCopeApplication).repositoryNews)
     }
 
     @SuppressLint("MissingInflatedId")

@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
-import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.model.DrugUsageRecord
 import com.example.healthcope.model.HealthLog
 import com.example.healthcope.model.MentalConditionRecordEntry
@@ -18,7 +18,7 @@ import java.util.*
 class ManagePersonalHealthActivity : AppCompatActivity() {
 
     private val personalHealthLogViewModel: PersonalHealthLogViewModel by viewModels {
-        PersonalHealthLogViewModelFactory((application as SingletonApplication).repositoryPersonalHealthLog)
+        PersonalHealthLogViewModelFactory((application as HealthCopeApplication).repositoryPersonalHealthLog)
     }
 
     @SuppressLint("WrongViewCast")

@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewParent
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.model.NewsArticle
 import com.example.healthcope.viewModel.NewsViewModel
 import com.example.healthcope.viewModel.NewsViewModelFactory
@@ -22,7 +21,7 @@ class LearnArticlesTitleActivity : AppCompatActivity(), NewsListAdapter.NewsList
 //        NewsViewModelFactory((application as NewsApplication).repositoryNews)
 //    }
     private val newsViewModel : NewsViewModel by viewModels<NewsViewModel> {
-        NewsViewModelFactory((application as SingletonApplication).repositoryNews)
+        NewsViewModelFactory((application as HealthCopeApplication).repositoryNews)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

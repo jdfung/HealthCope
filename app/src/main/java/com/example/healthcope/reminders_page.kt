@@ -6,33 +6,23 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.healthcope.DialogWithData.Companion.TAG
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.databinding.ActivityRemindersPageBinding
 import com.example.healthcope.model.Reminders
-import com.example.mvvmroomgroup2.emergencyContactAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.time.Month
-import java.time.Year
 import java.util.*
-import kotlin.collections.ArrayList
 
 class reminders_page : AppCompatActivity() {
 

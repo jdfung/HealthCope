@@ -28,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:padding="10dp"
         android:background="@drawable/main_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/setting_img"
@@ -38,22 +39,17 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:padding="16dp"
             android:text="@string/notifications"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent" />
-
-
 
         <TextView
             android:id="@+id/notification_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
             android:text="@string/notification_txt"
             android:layout_alignStart="@id/notification_txt"
-            android:layout_alignBottom="@+id/notification_txt"/>
+            android:layout_below="@id/notification_txt"/>
 
         <ImageButton
             android:id="@+id/notification_btn"
@@ -73,6 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:padding="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="128dp"
         android:background="@drawable/main_background"
@@ -84,7 +81,6 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:padding="16dp"
             android:text="@string/password_settings"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent" />
@@ -94,11 +90,9 @@
             android:id="@+id/password_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
             android:layout_alignStart="@id/password_txt"
-            android:layout_alignBottom="@+id/password_txt"
-            android:text="@string/password_txt" />
+            android:text="@string/password_txt"
+            android:layout_below="@id/password_txt"/>
 
         <ImageButton
             android:id="@+id/password_btn"
@@ -107,50 +101,6 @@
             android:layout_marginStart="55dp"
             android:layout_toEndOf="@+id/password_txt"
             android:contentDescription="@string/password_settings_details"
-            android:background="@null"
-            app:srcCompat="@drawable/ic_arrow_forward" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/region_time_display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:background="@drawable/main_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_display">
-
-        <TextView
-            android:id="@+id/notification"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:padding="16dp"
-            android:text="@string/region_amp_time"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
-        <TextView
-            android:id="@+id/region_time_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:layout_alignStart="@id/notification"
-            android:layout_alignBottom="@+id/notification"
-            android:text="@string/malaysia_kuala_lumpur" />
-
-        <ImageButton
-            android:id="@+id/region_time_btn"
-            android:layout_width="48dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="55dp"
-            android:layout_toEndOf="@+id/notification"
-            android:contentDescription="@string/region_time_details"
             android:background="@null"
             app:srcCompat="@drawable/ic_arrow_forward" />
 

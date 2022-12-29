@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar?.setDisplayShowTitleEnabled(false)
+        actionBar?.hide()
 
         to_vitals = findViewById<Button>(R.id.view_vital_button)
         to_body_measurement = findViewById<Button>(R.id.view_body_measure_button)
@@ -55,5 +56,12 @@ class MainActivity : AppCompatActivity() {
             val Intent = Intent(this, User_Profile::class.java)
             startActivity(Intent)
         }
+    }
+
+    override fun onBackPressed() {
+        val a = Intent(Intent.ACTION_MAIN)
+        a.addCategory(Intent.CATEGORY_HOME)
+        a.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(a)
     }
 }

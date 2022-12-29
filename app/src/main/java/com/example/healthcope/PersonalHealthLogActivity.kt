@@ -9,13 +9,13 @@ import android.widget.ProgressBar
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.healthcope.application.SingletonApplication
+import com.example.healthcope.application.HealthCopeApplication
 import com.example.healthcope.model.HealthLog
 
 class PersonalHealthLogActivity : AppCompatActivity(), PersonalHealthLogAdapter.HealthLogOnItemClickListener {
 
     private val personalHealthLogViewModel : PersonalHealthLogViewModel by viewModels {
-        PersonalHealthLogViewModelFactory((application as SingletonApplication).repositoryPersonalHealthLog)
+        PersonalHealthLogViewModelFactory((application as HealthCopeApplication).repositoryPersonalHealthLog)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

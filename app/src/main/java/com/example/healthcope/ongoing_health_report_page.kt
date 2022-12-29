@@ -143,9 +143,9 @@ class ongoing_health_report_page : AppCompatActivity() {
             override fun onResponse(call: Call<List<userHealthStatus>>, response: Response<List<userHealthStatus>>) {
                 if(response.isSuccessful) {
                     _healthStats.postValue(response.body())
-                    val filterStats: List<userHealthStatus>? = response.body()?.filter {
-                        it.date.before(endDate) &&
-                        it.date.after(startDate) }
+                    val filterStats: List<userHealthStatus>? = response.body()?.filter { it.date >= startDate &&
+                            it.date <= endDate
+                    }
                     if(filterStats != null) {
 
                         for ((index, model) in filterStats.withIndex()) {
