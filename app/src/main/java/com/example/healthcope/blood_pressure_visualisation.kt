@@ -34,7 +34,7 @@ class blood_pressure_visualisation : AppCompatActivity() {
 
         avgBP = findViewById(R.id.averageBP)
         highestBP = findViewById(R.id.highestBP)
-        avgBP.text = dataList?.average().toString()
+        avgBP.text = dataList?.average()?.toInt().toString()
         highestBP.text = dataList?.maxOrNull().toString()
 
         val actionBar = supportActionBar

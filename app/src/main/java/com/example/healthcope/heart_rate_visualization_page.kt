@@ -39,7 +39,7 @@ class heart_rate_visualization_page : AppCompatActivity() {
 
         avgBPM = findViewById(R.id.averageBPM)
         highestBPM = findViewById(R.id.highestBPM)
-        avgBPM.text = testList?.average().toString()
+        avgBPM.text = testList?.average()?.toInt().toString()
         highestBPM.text = testList?.maxOrNull().toString()
 
 

@@ -35,7 +35,7 @@ class blood_oxygen_visualisation : AppCompatActivity() {
         val dataList = intent.getIntegerArrayListExtra("bloodOxygenData")
 
         avgBO = findViewById(R.id.averageBO)
-        avgBO.text = dataList?.average().toString()
+        avgBO.text = dataList?.average()?.toInt().toString()
 
         val actionBar = supportActionBar
         actionBar!!.title = "Blood Oxygen Visualisation"

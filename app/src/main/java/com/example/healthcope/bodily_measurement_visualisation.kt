@@ -39,17 +39,17 @@ class bodily_measurement_visualisation : AppCompatActivity() {
         val bodyFatDataList = intent.getIntegerArrayListExtra("bodyFatData")
 
         avgWeight = findViewById(R.id.averageWeight)
-        avgWeight.text = weightDataList?.average().toString()
+        avgWeight.text = weightDataList?.average()?.toInt().toString()
         highestWeight = findViewById(R.id.highestWeight)
         highestWeight.text = weightDataList?.maxOrNull().toString()
 
         avgFat = findViewById(R.id.averageFat)
-        avgFat.text = bodyFatDataList?.average().toString()
+        avgFat.text = bodyFatDataList?.average()?.toInt().toString()
         highestFat = findViewById(R.id.highestFat)
         highestFat.text = bodyFatDataList?.maxOrNull().toString()
 
         avgTemp = findViewById(R.id.averageTemp)
-        avgTemp.text = bodyTempDataList?.average().toString()
+        avgTemp.text = bodyTempDataList?.average()?.toInt().toString()
         highestTemp = findViewById(R.id.highestTemp)
         highestTemp.text = bodyTempDataList?.maxOrNull().toString()
 
