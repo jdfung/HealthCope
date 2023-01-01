@@ -5,18 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
-    tools:context=".Vitals">
+    tools:context=".featureUserHealthProfile.Vitals">
 
     <RelativeLayout
         android:id="@+id/heart_rate_display"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_margin="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:background="@drawable/main_background"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-3dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/heart_rate_txt"
@@ -34,7 +38,7 @@
         <ImageButton
             android:id="@+id/viewVitals_btn"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="30dp"
             android:layout_toEndOf="@+id/heart_rate_txt"
             android:contentDescription="@string/heart_rate_details"
@@ -45,13 +49,15 @@
 
     <RelativeLayout
         android:id="@+id/blood_pressure_display"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_margin="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:background="@drawable/main_background"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/colorPrimaryVariant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/heart_rate_display">
 
@@ -71,7 +77,7 @@
         <ImageButton
             android:id="@+id/add_vitals_btn"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="30dp"
             android:layout_toEndOf="@+id/blood_pressure_txt"
             android:contentDescription="@string/blood_pressure_details"

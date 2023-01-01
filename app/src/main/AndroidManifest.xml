@@ -16,42 +16,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcope">
         <activity
-            android:name=".LearnVideosTitleActivity"
+            android:name=".featureHealthInformation.LearnVideosTitleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LearnVideosActivity"
+            android:name=".featureHealthInformation.LearnVideosActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".viewBodyMeasurementData"
+            android:name=".featureUserHealthProfile.viewBodyMeasurementData"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".addBodyMeasurementData"
+            android:name=".featureUserHealthProfile.addBodyMeasurementData"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".addVitalsData"
+            android:name=".featureUserHealthProfile.addVitalsData"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".viewVitalsData"
+            android:name=".featureUserHealthProfile.viewVitalsData"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -59,41 +59,41 @@
         </activity>
 
         <receiver
-            android:name=".Notification"
+            android:name=".featureHealthAlerts.Notification"
             android:enabled="true" /> <!-- JD's Activity -->
         <activity
-            android:name=".User_Profile"
+            android:name=".featureUserManagement.User_Profile"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Edit_profile"
+            android:name=".featureUserManagement.Edit_profile"
             android:exported="false"
-            android:parentActivityName=".User_Profile">
+            android:parentActivityName=".featureUserManagement.User_Profile">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Forgot_password"
+            android:name=".featureUserManagement.Forgot_password"
             android:exported="false"
-            android:parentActivityName=".Login">
+            android:parentActivityName=".featureUserManagement.Login">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".featureUserManagement.Register"
             android:exported="false"
-            android:parentActivityName=".Login">
+            android:parentActivityName=".featureUserManagement.Login">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".featureUserManagement.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -106,83 +106,83 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".reminders_page"
+            android:name=".featureHealthAlerts.reminders_page"
             android:exported="false"
-            android:parentActivityName=".User_Profile">
+            android:parentActivityName=".featureUserManagement.User_Profile">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".add_emergency_contacts"
+            android:name=".featureHealthAlerts.add_emergency_contacts"
             android:exported="false"
-            android:parentActivityName=".User_Profile">
+            android:parentActivityName=".featureUserManagement.User_Profile">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".bodily_measurement_visualisation"
+            android:name=".featureHealthVisualisation.bodily_measurement_visualisation"
             android:exported="false"
-            android:parentActivityName=".ongoing_health_report_page">
+            android:parentActivityName=".featureHealthVisualisation.ongoing_health_report_page">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".blood_oxygen_visualisation"
+            android:name=".featureHealthVisualisation.blood_oxygen_visualisation"
             android:exported="false"
-            android:parentActivityName=".ongoing_health_report_page">
+            android:parentActivityName=".featureHealthVisualisation.ongoing_health_report_page">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".blood_pressure_visualisation"
+            android:name=".featureHealthVisualisation.blood_pressure_visualisation"
             android:exported="false"
-            android:parentActivityName=".ongoing_health_report_page">
+            android:parentActivityName=".featureHealthVisualisation.ongoing_health_report_page">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".heart_rate_visualization_page"
+            android:name=".featureHealthVisualisation.heart_rate_visualization_page"
             android:exported="false"
-            android:parentActivityName=".ongoing_health_report_page">
+            android:parentActivityName=".featureHealthVisualisation.ongoing_health_report_page">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ongoing_health_report_page"
+            android:name=".featureHealthVisualisation.ongoing_health_report_page"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity> <!-- Ben's Activity -->
         <activity
-            android:name=".LearnArticlesActivity"
+            android:name=".featureHealthInformation.LearnArticlesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LearnArticlesTitleActivity"
+            android:name=".featureHealthInformation.LearnArticlesTitleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SetInterestsActivity"
+            android:name=".featureHealthInformation.SetInterestsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LearnActivity"
+            android:name=".featureHealthInformation.LearnActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar">
             <meta-data
@@ -190,49 +190,49 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".PersonalHealthLogActivity"
+            android:name=".featureTrackAndCheckIn.PersonalHealthLogActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PhysicalConditionActivity"
+            android:name=".featureTrackAndCheckIn.PhysicalConditionActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DrugEffectivenessActivity"
+            android:name=".featureTrackAndCheckIn.DrugEffectivenessActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DrugUsageActivity"
+            android:name=".featureTrackAndCheckIn.DrugUsageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MentalConditionActivity"
+            android:name=".featureTrackAndCheckIn.MentalConditionActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".HealthLogActivity"
+            android:name=".featureTrackAndCheckIn.HealthLogActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ManagePersonalHealthActivity"
+            android:name=".featureTrackAndCheckIn.ManagePersonalHealthActivity"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
             <meta-data
@@ -240,168 +240,168 @@
                 android:value="" />
         </activity> <!-- KY Activity -->
         <activity
-            android:name=".BodyMeasurements"
+            android:name=".featureUserHealthProfile.BodyMeasurements"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Vitals"
+            android:name=".featureUserHealthProfile.Vitals"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ResetPassword"
+            android:name=".featureAppSettings.ResetPassword"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegionAndTime"
+            android:name=".featureAppSettings.RegionAndTime"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PasswordSettings"
+            android:name=".featureAppSettings.PasswordSettings"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Notifications"
+            android:name=".featureAppSettings.Notifications"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".featureAppSettings.Settings"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".WeightAdd"
+            android:name=".featureUserHealthProfile.WeightAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".OxygenSaturationAdd"
+            android:name=".featureUserHealthProfile.OxygenSaturationAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".HeightAdd"
+            android:name=".featureUserHealthProfile.HeightAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".HeartRateAdd"
+            android:name=".featureUserHealthProfile.HeartRateAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BodyTemperatureAdd"
+            android:name=".featureUserHealthProfile.BodyTemperatureAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BodyFatPercentageAdd"
+            android:name=".featureUserHealthProfile.BodyFatPercentageAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BloodGlucoseAdd"
+            android:name=".featureUserHealthProfile.BloodGlucoseAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BloodPressureAdd"
+            android:name=".featureUserHealthProfile.BloodPressureAdd"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Weight"
+            android:name=".featureUserHealthProfile.Weight"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Height"
+            android:name=".featureUserHealthProfile.Height"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BodyFatPercentage"
+            android:name=".featureUserHealthProfile.BodyFatPercentage"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".OxygenSaturation"
+            android:name=".featureUserHealthProfile.OxygenSaturation"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BloodGlucose"
+            android:name=".featureUserHealthProfile.BloodGlucose"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BodyTemperature"
+            android:name=".featureUserHealthProfile.BodyTemperature"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".HeartRate"
+            android:name=".featureUserHealthProfile.HeartRate"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BloodPressure"
+            android:name=".featureUserHealthProfile.BloodPressure"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".featureUserHealthProfile.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

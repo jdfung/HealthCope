@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User_Profile">
+    tools:context=".featureUserManagement.User_Profile">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_profile_pic"
@@ -87,7 +87,7 @@
                 android:id="@+id/averageHeartRate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/heart_pulse_content"
+                android:text="N/A"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -125,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoSizeTextType="uniform"
-                android:text="@string/blood_pressure_content"
+                android:text="N/A"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -163,7 +163,7 @@
                 android:id="@+id/averageBloodO"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/blood_oxygen_content"
+                android:text="N/A"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -208,7 +208,7 @@
                 android:id="@+id/averageWeightAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/weight_content"
+                android:text="N/A"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -245,7 +245,7 @@
                 android:id="@+id/averageTempAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/temperature_content"
+                android:text="N/A"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -273,7 +273,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/calories_header"
+                android:text="Body Fat"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="12sp"
@@ -282,7 +282,7 @@
                 android:id="@+id/averageFatAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/calories_content"
+                android:text="N/A"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -290,7 +290,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/calories_footer"
+                android:text="%"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="12sp" />

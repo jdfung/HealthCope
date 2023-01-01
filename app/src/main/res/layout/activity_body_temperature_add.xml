@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".BodyTemperatureAdd"
+    tools:context=".featureUserHealthProfile.BodyTemperatureAdd"
     android:layout_margin="16dp"
     android:orientation="vertical">
 

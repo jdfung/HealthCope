@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".blood_oxygen_visualisation">
+    tools:context=".featureHealthVisualisation.blood_oxygen_visualisation">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/charts"

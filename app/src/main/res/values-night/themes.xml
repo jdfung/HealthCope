@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Healthcope" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Healthcope" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:forceDarkAllowed">false</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">#022C39</item>
         <item name="colorPrimaryVariant">#1D7C8E</item>

@@ -1,8 +1,8 @@
 package com.example.healthcope.application
 
 import android.app.Application
-import com.example.healthcope.EmergencyContactRepo
-import com.example.healthcope.RemindersRepo
+import com.example.healthcope.featureHealthAlerts.EmergencyContactRepo
+import com.example.healthcope.featureHealthAlerts.RemindersRepo
 import com.example.healthcope.repository.NewsRepository
 import com.example.healthcope.repository.PersonalHealthLogRepository
 

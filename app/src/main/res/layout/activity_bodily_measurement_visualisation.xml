@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bodily_measurement_visualisation">
+    tools:context=".featureHealthVisualisation.bodily_measurement_visualisation">
 
     <TextView
         android:id="@+id/chart2_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calories intake (per day)"
+        android:text="Body Fat"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -99,7 +99,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="cal"
+                        android:text="%"
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:autoSizeTextType="uniform"
@@ -144,7 +144,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/calories_footer"
+                        android:text="%"
                         android:textAlignment="center"
                         android:textSize="10sp"
                         android:autoSizeTextType="uniform"

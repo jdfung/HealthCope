@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ongoing_health_report_page">
+    tools:context=".featureHealthVisualisation.ongoing_health_report_page">
 
 
 <!-- Collapsing toolbar start -->
@@ -19,11 +19,9 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             app:contentScrim="?attr/colorPrimary"
-            app:title="@string/Health_report_header"
+            app:title="Health Report"
             app:expandedTitleTextColor="@color/white"
             app:expandedTitleGravity="center"
-            app:expandedTitleMarginStart="20dp"
-            app:expandedTitleMarginEnd="20dp"
             app:collapsedTitleTextColor="@color/white">
 
             <com.google.android.material.appbar.MaterialToolbar

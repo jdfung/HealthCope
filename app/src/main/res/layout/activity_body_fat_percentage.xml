@@ -11,7 +11,7 @@
     android:layout_marginEnd="16dp"
     android:layout_marginTop="80dp"
     android:layout_marginBottom="80dp"
-    tools:context=".BodyFatPercentage">
+    tools:context=".featureUserHealthProfile.BodyFatPercentage">
 
 
     <TextView

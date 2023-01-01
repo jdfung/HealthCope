@@ -23,7 +23,7 @@
 
     <string name="temperature_header">Temperature</string>
     <string name="temperature_content">37.6</string>
-    <string name="temperature_footer">Â°C</string>
+    <string name="temperature_footer">°C</string>
 
     <string name="calories_header">Calories</string>
     <string name="calories_content">3100</string>
