@@ -18,3 +18,6 @@ HealthCope is built with Kotlin and android studio, and can be installed and run
 
 # What the app looks like
 ![Login](https://github.com/jdfung/HealthCope/blob/master/image.png)
+![Homepage](https://github.com/jdfung/HealthCope/blob/master/ss3.png)
+![Profile](https://github.com/jdfung/HealthCope/blob/master/ss4.png)
+![Health visualize](https://github.com/jdfung/HealthCope/blob/master/ss2.png)
